@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Club Membership Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tech Club Membership Form</h1>
+    <form id="membershipForm" onsubmit="return handleSubmit(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="about">Tell us about yourself:</label>
+        <textarea id="about" name="about" required></textarea>
+
+        <label for="achievements">Achievements? If yes, please describe them:</label>
+        <textarea id="achievements" name="achievements" required></textarea>
+
+        <label for="grade">Grade:</label>
+        <select id="grade" name="grade" required>
+            <option value="">Select your grade</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <alert message="form submitted" ?><![CDATA[3]]><![CDATA[]]>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</session>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+
+        <label>Would you like to receive notifications?</label>
+        <input type="radio" id="notificationsYes" name="notifications" value="yes" required>
+        <label for="notificationsYes">Yes</label>
+        <input type="radio" id="notificationsNo" name="notifications" value="no" required>
+        <label for="notificationsNo">No</label>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Your form is submitted!');
+            document.getElementById('membershipForm').reset();
+            return false;
+        }
+    </script>
+</body>
+</html>
